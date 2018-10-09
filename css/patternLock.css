@@ -27,7 +27,7 @@
 } 
 
 .patt-error .patt-circ.hovered{
-	border:3px solid #BA1B26;
+	border:3px solid red;
 }
 
 .patt-hidden .patt-circ.hovered{border:0;}

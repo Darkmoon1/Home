@@ -64,7 +64,7 @@
         var lock = new PatternLock("#patternContainer", {
             margin: 50, matrix: [3, 3], onDraw: function (pattern) {
                 if(pattern != 42568){
-                    alert("密码错误");
+                    lock.error();
                     return;
                 }
                 $("#pattern").remove();
