@@ -20,3 +20,7 @@
     -webkit-user-select: none;
     -o-user-select: none;
 }
+
+#catController:hover{
+    cursor: Pointer;
+}

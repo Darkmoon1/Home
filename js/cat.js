@@ -30,7 +30,7 @@ function createCat(){
     catContainer.appendTo('body');
 
     cat = $('<div id="cat"></div>');
-    catPicture = $(imgs[params.imgCount]);
+    catPicture = $("<img src='catPicture/cat1.png'>");
     catPicture.appendTo(cat);
     cat.appendTo(catContainer);
 
@@ -38,10 +38,8 @@ function createCat(){
     params.left = catController.css("left");
     params.top = catController.css("top");
     catController.click(function () {
-        params.imgCount = params.imgCount > 19 ? 0 : params.imgCount + 1;
-        var lastImg = catPicture.replaceWith(imgs[params.imgCount]);
-        catPicture = $(imgs[params.imgCount]);
-        imgs.push(lastImg);
+        params.imgCount = params.imgCount > 18 ? 1 : params.imgCount + 1;
+        catPicture.attr("src" , "catPicture/cat" + params.imgCount + ".png");
     })
     catController.appendTo(catContainer);
 
